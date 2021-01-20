@@ -74,8 +74,6 @@ for staker in address_obj:
 
 print("= totalStakingShareSeconds:{}\n= Number of users: {}\n".format(totalStakingShareSeconds, len(userStakingShareSeconds)))
 
-totalRewards = 0
-
 # Generate Ditto Claim list and Balance 
 with open('ditto_list_claim.csv', 'w', encoding='utf8') as file:
   writer = csv.writer(file)
@@ -90,7 +88,3 @@ with open('ditto_list_claim.csv', 'w', encoding='utf8') as file:
 
       print("{},{}".format(address,amount_fmt))
       writer.writerows = (address, amount_fmt)
-
-      totalRewards += claim_amount
-
-print("Total rewards: {}".format(totalRewards))
