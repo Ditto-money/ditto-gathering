@@ -77,7 +77,7 @@ print("= totalStakingShareSeconds:{}\n= Number of users: {}\n".format(totalStaki
 # Generate Ditto Claim list and Balance 
 with open('ditto_list_claim.csv', 'w', encoding='utf8') as file:
   writer = csv.writer(file)
-  writer.writerow = [("address", "amount")]
+#  writer.writerow = [("address", "amount")]
 
   for address,stakingShareSeconds in userStakingShareSeconds.items():
 
@@ -87,4 +87,4 @@ with open('ditto_list_claim.csv', 'w', encoding='utf8') as file:
       amount_fmt = "%d" % claim_amount
 
       print("{},{}".format(address,amount_fmt))
-      writer.writerows = (address, amount_fmt)
+     # writer.writerows = (address, amount_fmt)
